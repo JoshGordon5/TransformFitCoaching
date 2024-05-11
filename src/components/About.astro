@@ -1,0 +1,35 @@
+---
+import { Image } from 'astro:assets';
+
+interface Props {
+  linkText: string;
+  imageOne:string;
+  imageTwo:string;
+}
+const { linkText, imageOne, imageTwo } = Astro.props;
+---
+
+<section class="py-12">
+  <div class="grid grid-cols-2 p-4">
+    <div>
+      <h1 class="text-white text-5xl italic max-w-xs yellowText pb-8">About Us</h1>
+      <p class="text-white max-w-sm">
+        Transform Fit Coaching was founded to bring your mental and physical health to the forefront.
+        We care about your becoming the best version of yourself and want to support you every step of
+        the way.
+      </p>
+      <p class="text-white mt-8 underline">
+        <a href={linkText}>Learn more</a>
+      </p>
+    </div>
+    <div class="grid grid-cols-2">
+        <Image src={'/images/'+imageOne} 
+        width={600} 
+        height={600/1.5} 
+        alt="Gym Instructor" 
+        class="rounded-md object-cover w-48"/>
+        <Image src={'/images/'+imageTwo}
+         width={600} height={600/1.5} alt="Boxing Instructor" class="rounded-md object-cover w-48 pt-8"/>
+    </div>
+  </div>
+</section>

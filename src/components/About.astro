@@ -9,27 +9,16 @@ interface Props {
 const { linkText, imageOne, imageTwo } = Astro.props;
 ---
 
-<section class="py-12">
-  <div class="grid grid-cols-2 p-4">
-    <div>
-      <h1 class="text-white text-5xl italic max-w-xs yellowText pb-8">About Us</h1>
-      <p class="text-white max-w-sm">
-        Transform Fit Coaching was founded to bring your mental and physical health to the forefront.
-        We care about your becoming the best version of yourself and want to support you every step of
-        the way.
-      </p>
-      <p class="text-white mt-8 underline">
-        <a href={linkText}>Learn more</a>
-      </p>
-    </div>
-    <div class="grid grid-cols-2">
-        <Image src={'/images/'+imageOne} 
-        width={600} 
-        height={600/1.5} 
-        alt="Gym Instructor" 
-        class="rounded-md object-cover w-48"/>
-        <Image src={'/images/'+imageTwo}
-         width={600} height={600/1.5} alt="Boxing Instructor" class="rounded-md object-cover w-48 pt-8"/>
-    </div>
+<section class="py-12 text-center">
+  <h1 class="yellowText text-5xl italic uppercase">About Us</h1>
+  <p class="text-white text-lg italic bold mx-40">
+    Transform Fit Coaching was founded to bring your mental and physical health to the forefront.
+    We care about you becoming the best version of yourself and want to support you every step of
+    the way. <br><br>
+    We are focusing on building a community of like minded individuals to help and encourage each other
+    to acheive their own goals.
+  </p>
+  <div class="grid grid-cols-1 md:grid-cols-3">
+  
   </div>
-</section>
+  </section>

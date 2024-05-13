@@ -1,11 +1,10 @@
 ---
 interface Props {
   callToAction: string;
-  buttonText: string;
   companyName:string;
   //    logoImage:string;
 }
-const { callToAction, buttonText, companyName } = Astro.props;
+const { callToAction, companyName } = Astro.props;
 
 const imageURL = "hero-fitness-image.jpg"
 const bgStyle = {
@@ -13,7 +12,7 @@ const bgStyle = {
 };
 ---
 
-<header class="bg-cover bg-no-repeat bg-gray-400 bg-blend-multiply" style={bgStyle}>
+<header class="bg-cover bg-no-repeat bg-gray-800 bg-blend-multiply">
   <nav class="text-white uppercase pt-8 p-4 font-bold2">
     <ul>
       <li>{companyName}</li>
@@ -22,7 +21,5 @@ const bgStyle = {
   <div class="px-4 mx-auto max-w-screen-xl text-center py-36 text-white">
   
       <h1 class="font-extrabold text-9xl tracking-wide mb-4 uppercase italic">{callToAction}</h1>
-      <button class="yellowBG p-2 uppercase text-black font-bold">{buttonText}</button>
-
   </div>
 </header>

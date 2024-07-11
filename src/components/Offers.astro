@@ -3,18 +3,21 @@ import ImageCard from "./ImageCard.astro";
 const offers = [
     {
         imageURL:"dumbbells.jpg",
-        offerHeader:"Package 1",
-        offerText:"this is the first package"
+        offerHeader:"Nutrition",
+        offerText:"Unlock your best self with a customized nutrition plan designed to fuel your fitness journey.",
+        offerPrice:"£90 per month"
     },
     {
         imageURL:"rowing.jpg",
-        offerHeader:"Package 2",
-        offerText:"this is the second package"
+        offerHeader:"Full",
+        offerText:"Achieve comprehensive results with tailored workouts for both home and gym, plus a personalized nutrition plan.",
+        offerPrice:"£150 per month"
     },
     {
         imageURL:"skipping.jpg",
-        offerHeader:"Package 3",
-        offerText:"this is the third package"
+        offerHeader:"Hybrid",
+        offerText:"Experience the ultimate transformation with customized workouts, a personalized nutrition plan, and in-person training sessions for hands-on guidance.",
+        offerPrice:"£200 per month"
     }
 ]
 ---
@@ -23,10 +26,12 @@ const offers = [
 <section class="py-12 text-center">
 <h1 class="yellowText text-5xl italic uppercase">What we offer</h1>
 <p class="text-white uppercase italic bold">Find the package that suits you best</p>
+<p class="text-white text-lg italic bold mx-40">Transform your health and fitness journey with expert 
+    guidance from your dedicated personal trainer committed to helping you achieve your goals.</p>
 <div class="grid grid-cols-1 md:grid-cols-3">
 {
     offers.map((offer)=>(
-        <ImageCard imageURL={offer.imageURL} header={offer.offerHeader} text={offer.offerText}/>
+        <ImageCard imageURL={offer.imageURL} header={offer.offerHeader} text={offer.offerText} price={offer.offerPrice}/>
     ))
 }
 

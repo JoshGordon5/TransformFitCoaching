@@ -2,20 +2,24 @@
 interface Props {
   text: string;
   header: string;
+  price: string;
   imageURL: string;
 }
-const { text = "",header="", imageURL = "" } = Astro.props;
+const { text = "",header="", price="", imageURL = "" } = Astro.props;
 const imageStyle = {
   backgroundImage: `url(/images/${imageURL})`,
 };
 ---
 
 <div
-  class="pb-48 pt-8 bg-cover m-8 bg-gray-700 bg-blend-multiply"
+  class="pb-20 pt-8 bg-cover m-8 bg-gray-700 bg-blend-multiply"
   style={imageStyle}
 >
   <h2 class="text-white uppercase text-4xl italic">{header}</h2>
-    <div class="text-white uppercase text-xl italic">
+    <div class="pt-24 text-white text-xl italic ">
       <h2 >{text}</h2>
+    </div>
+    <div class="pt-24 pb-2 text-white text-2xl">
+      <h2 >{price}</h2>
     </div>
   </div>

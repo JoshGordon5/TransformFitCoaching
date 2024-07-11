@@ -17,7 +17,7 @@ const content = [
   },
   {
     heading: "Phone Number",
-    info: "07123123123",
+    info: "+447742900427",
   },
 ];
 ---
@@ -27,14 +27,37 @@ const content = [
   style={bgStyle}
 >
   <div class="mx-auto max-w-screen-xl">
+    <header>
+      <nav class="text-white uppercase pt-8 p-4 font-bold2">
+      </nav>
+      <div class="px-3 mx-auto max-w-screen-xl text-center py-18 text-white">
+      
+          <h1 class="font-extrabold text-9xl tracking-wide mb-4 uppercase italic">Transform Fit Coaching</h1>
+      </div>
+    </header>
     <h1
       class="font-extrabold text-5xl yellowText tracking-wide uppercase italic p-36 max-w-xl"
     >
       {callToAction}
       <p class="text-white text-xs">
-        Book in a 15 min call to discuss your fitness journey
+         in a 15 min call to discuss your fitness journey
       </p>
+      <!-- Calendly inline widget begin -->
+      <div class="calendly-inline-widget" data-url="https://calendly.com/joshg2550/1-to-1-fitness-call?primary_color=f5cb5c" style="min-width:320px;height:700px;width:700px;"></div>
+      <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+      <!-- Calendly inline widget end -->
+      <!-- Calendly badge widget begin -->
+      <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+      <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+      <script type="text/javascript">window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/joshg2550/1-to-1-fitness-call', text: 'Schedule time with me', color: '#f5cb5c', textColor: '#ffffff', branding: undefined }); }</script>
+      <!-- Calendly badge widget end -->
+      <!-- Calendly link widget begin -->
+      <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+      <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+      <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/joshg2550/1-to-1-fitness-call'});return false;">Click here to book a call with me</a>
+      <!-- Calendly link widget end -->
     </h1>
+    
     <div class="yellowBG grid grid-cols-1 md:grid-cols-3">
       {
         content.map((item) => (

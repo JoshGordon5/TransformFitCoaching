@@ -3,29 +3,29 @@
 const testimonials = [
   {
     profileURL: "gym-femaleinstructor.jpg",
-    author: "Donna Bleaker",
-    age: 31,
+    author: "",
+    age: "",
     quote:
-      "Testimonials are short quotes from people who love your brand. It's a great way to convince customers to try your services. ",
+      "Ollie is fantastic.  I started training with him when I had a sports injury and needed to build up muscle around the injury. He’s always supportive and understanding and has helped me to work towards my goals. Highly recommended, especially for anyone who is unsure of the gym environment.",
   },
   {
     profileURL: "gym-ropes.jpg",
-    author: "Lauren Cross",
-    age: 28,
+    author: "",
+    age: "",
     quote:
-      "Testimonials are short quotes from people who love your brand. It's a great way to convince customers to try your services. ",
+      "When I began I was recovering from two frozen shoulders and I hadn’t regained full mobility and was definitely lacking strength. Thanks to Oli’s dedication and experience, I have not only regained flexibility but have also significantly increased my strength, muscle tone and confidence. Oli is incredibly friendly and enthusiastic, bringing a wealth of experience and knowledge to every session. As a woman approaching 60, I am now in better shape than I have ever been. I thoroughly recommend Oli Jones as a personal trainer.",
   },
   {
     profileURL: "gym-instructor.jpg",
-    author: "Thomas Xue",
-    age: 44,
+    author: "",
+    age: "",
     quote:
-      "Testimonials are short quotes from people who love your brand. It's a great way to convince customers to try your services. ",
+      "Approaching middle age with two young daughters I found myself struggling to keep up with them so I met started training with Oli and haven’t looked back since! He puts you at ease but at the same time gets the best out of you. As a result I am much stronger than I was, much fitter and as a fantastic side effect, mentally stronger too. Thanks so much and I look forward to working with you for years to come! ",
   },
 ];
 ---
 <section class="py-12">
-  <h1 class="yellowText text-5xl italic uppercase text-center">Before and After</h1>
+  <h1 class="yellowText text-5xl italic uppercase text-center">Testimonials</h1>
   <div class="grid grid-cols-1 md:grid-cols-3">
     {
       testimonials.map((profile)=>(
@@ -35,7 +35,7 @@ const testimonials = [
             <p class="pb-4 font-bold">
               {profile.quote}
               </p>
-              <small>{profile.author},{profile.age}</small>
+              <small>{profile.author}{profile.age}</small>
             </div>
           </div>
 

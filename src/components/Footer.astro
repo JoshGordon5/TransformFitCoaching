@@ -1,0 +1,27 @@
+---
+const content = [
+  {
+    heading: "Local area",
+    info: "Sheffield",
+  },
+  {
+    heading: "Email Address",
+    info: "transformfituk@gmail.com",
+  },
+  {
+    heading: "Phone Number",
+    info: "+447742900427",
+  },
+];
+---
+
+<div class="yellowBG grid grid-cols-1 md:grid-cols-3">
+    {
+      content.map((item) => (
+        <div class="p-12">
+          <h1 class="uppercase text-2xl italic">{item.heading}</h1>
+          <p>{item.info}</p>
+        </div>
+      ))
+    }
+  </div>
